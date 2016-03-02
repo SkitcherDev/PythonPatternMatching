@@ -3,3 +3,5 @@
 
 for i in range(5):
 	print("Hello world!")
+
+print("This is a test 2.0")
