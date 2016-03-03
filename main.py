@@ -1,7 +1,18 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-for i in range(5):
-	print("Hello world!")
+import re
 
-print("This is a test 2.0")
+phoneNumRegex = re.compile(r"(\d\d\d)-(\d\d\d-\d\d\d\d)")
+
+
+f = open("workfile.txt", "r")
+message = f.read()
+f.close()
+
+mo = []
+mo = phoneNumRegex.findall(message)
+
+print('Phone number found: ' + str([x[1] for x in mo]))
+print("Done")
+
